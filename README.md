@@ -70,13 +70,13 @@ Each pixel of the resulting image contains a value for the angle of the gradient
 
 ### Process
 
-![Grad_and_Mag](/Users/jeongwhanchoi/GitHub/advanced-techniques-for-lane-finding/img/Grad_and_Mag.png)
+![Grad_and_Mag](./img/Grad_and_Mag.png)
 
-![GradD_and_Multiple](/Users/jeongwhanchoi/GitHub/advanced-techniques-for-lane-finding/img/GradD_and_Multiple.png)
+![GradD_and_Multiple](./img/GradD_and_Multiple.png)
 
 ### Original Image vs Result Image
 
-![Combined](/Users/jeongwhanchoi/GitHub/advanced-techniques-for-lane-finding/img/Combined.png)
+![Combined](./img/Combined.png)
 
 ---
 
