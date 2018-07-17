@@ -38,11 +38,17 @@ The goal is to apply a threshold to the overall magnitude of the gradient, in bo
 
 The magnitude, or absolute value, of the gradient is just the square root of the squares of the individual x and y gradients. For a gradient in both the $x$ and $y$ directions, the magnitude is the square root of the sum of the squares.
 
-$$\text{abs_sobelx} = \sqrt{(sobel_x)^2}$$
+$$
+\text{abs_sobelx} = \sqrt{(sobel_x)^2}
+$$
 
-$$\text{abs_sobely} = \sqrt{(sobel_y)^2}$$
+$$
+\text{abs_sobely} = \sqrt{(sobel_y)^2}
+$$
 
-$$\text{abs_sobelxy} = \sqrt{(sobel_x)^2+(sobel_y)^2}$$
+$$
+\text{abs_sobelxy} = \sqrt{(sobel_x)^2+(sobel_y)^2}
+$$
 
 It's also worth considering the size of the region in the image over which you'll be taking the gradient. You can modify the kernel size for the Sobel operator to change the size of this region. Taking the gradient over larger regions can smooth over noisy intensity fluctuations on small scales. The default Sobel kernel size is 3, but here you'll define a new function that takes kernel size as a parameter.
 
@@ -60,8 +66,9 @@ In the case of lane lines, we're interested only in edges of a particular orient
 
 The direction of the gradient is simply the inverse tangent (arctangent) of the $y$ gradient divided by the $x$ gradient:
 
-$$arctan(sobel_y/sobel_x)$$
-
+$$
+arctan(sobel_y/sobel_x)
+$$
 Each pixel of the resulting image contains a value for the angle of the gradient away from horizontal in units of radians, covering a range of $−π/2$ to $π/2$. An orientation of 0 implies a vertical line and orientations of $+/−π/2$ imply horizontal lines. (Note that in the quiz below, we actually utilize np.arctan2, which can return values between $+/−π$; however, as we'll take the absolute value of $sobel_x$, this restricts the values to $+/−π/2$, as shown [here](https://en.wikipedia.org/wiki/Atan2).)
 
 ---
@@ -103,10 +110,13 @@ Most of these different color spaces were either inspired by the human vision sy
 ![HSV_HLS_Color_Space](./img/HSV_HLS_Color_Space.png)
 
 **Constants**
+$$
+V_{\text{max}}←max(\text{R,G,B})
+$$
 
-$$V_{\text{max}}←max(\text{R,G,B})$$
-
-$$V_{\text{min}}←max(\text{R,G,B})$$
+$$
+V_{\text{min}}←max(\text{R,G,B})
+$$
 
 These are the maximum and minimum values across all three RGB values for a given color (by pixel).
 
